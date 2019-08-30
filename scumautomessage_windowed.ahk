@@ -9,15 +9,15 @@
  *
  * by GAMNEBotLand.com
  */
-
+ 
 #NoEnv
 #Singleinstance Force
 SetTitleMatchMode, 2
-CoordMode, mouse, screen
+SetControlDelay -1
 
 global comando1, tiempo1, m, msg, toggle1,clipboardold
 
-tiempo1  := 1	;await minutes every message
+tiempo1  := 5	;await minutes every message
 pastebin := "https://pastebin.com/raw/QxgHJ1BN"
 
 toggle1 := false
@@ -37,6 +37,7 @@ If (toggle1)
 	Traytip, scumautomessage,ACTIVATED, 5, 1
 	Sleep, 3000
 	SetTimer, enviar_comandos, %tiempo1%
+
 }
 else
 {
@@ -49,28 +50,20 @@ else
 enviar_comandos:
 	If (toggle1)
 	{
-		WinActivate, SCUM
-		WinWaitActive, SCUM
-		BlockInput MouseMove
-		SetKeyDelay, 30, 30
 		Sleep 100
-		Send t
-		Sleep 50
-		Send ^a
-		Sleep 50		
 		clipboardold:=clipboard
-		Sleep 50
+		Sleep 100
 		clipboard:=""
+		Sleep 100
 		clipboard:=comando1[m]
-		Sleep 50
-		Send ^v
-		Sleep 50
+		Sleep 100
+		ControlSend, , t{Ctrl down}a{Ctrl up}{Ctrl down}v{Ctrl up}, SCUM
 		clipboard:=clipboardold
-		Sleep 50
-		Send {Enter}		
-		Sleep 50
-		Send {Enter}		
-		BlockInput MouseMoveOff
+		Sleep 100
+		ControlSend, ,{Enter}, SCUM
+		Sleep 100
+		ControlSend, ,{Enter}, SCUM
+		Sleep 100
 		m++
 		if (m>comando1.MaxIndex())
 		{
@@ -103,7 +96,6 @@ leermensajes() {
 		comando1[n]:=A_LoopField
 		n++
 	}
-	Sleep 5000
 return
 }
 
