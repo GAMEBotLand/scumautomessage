@@ -1,13 +1,11 @@
-﻿/**
- * SCUM Server Script 
- * License: WTFPL [http://wtfpl.net/]
- * Requirements: AutoHotkey (v1.1+ or v2.0-a+)
+/**
+ * scum auto messages AHK script
  * 
- *     Uso
- *          Control+M activar / desactivar
- * by:
- *     La Patrulla Z: https://es-es.facebook.com/PatrullaZ/
- *     Escoria Humana SCUM Server 
+ * Requirements: AutoHotkey (v1.1+)
+ * 
+ *     Use:
+ *          Control+M   activate / deactivate
+ * by GAMNEBotLand.com
  */
 
 #NoEnv
