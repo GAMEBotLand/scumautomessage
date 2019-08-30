@@ -15,7 +15,7 @@ CoordMode, mouse, screen
 
 global comando1, tiempo1, m, msg, toggle1,clipboardold
 
-tiempo1  := 1	;set minutes every message
+tiempo1  := 5	;set minutes every message
 pastebin := "https://pastebin.com/raw/QxgHJ1BN"
 
 toggle1 := false
