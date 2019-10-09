@@ -2,7 +2,7 @@
  * scum auto messages AHK script WINDOWED MODE VERSION
  * 
  * Requirements: AutoHotkey (v1.1+)
- * SCUM IN WINDOEWS MODE
+ * SCUM IN FULL SCREEN MODE
  * 
  *     Use:
  *          Control+M   activate / deactivate
@@ -17,7 +17,7 @@ CoordMode, mouse, screen
 
 global comando1, tiempo1, m, msg, toggle1,clipboardold
 
-tiempo1  := 1	;await minutes every message
+tiempo1  := 5	;await minutes every message
 pastebin := "https://pastebin.com/raw/QxgHJ1BN"
 
 toggle1 := false
