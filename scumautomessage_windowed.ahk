@@ -2,7 +2,7 @@
  * scum auto messages AHK script WINDOWED MODE VERSION
  * 
  * Requirements: AutoHotkey (v1.1+)
- * SCUM IN WINDOEWS MODE
+ * SCUM IN WINDOWED MODE
  * 
  *     Use:
  *          Control+M   activate / deactivate
